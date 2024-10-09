@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.scss'
 
 const Navbar = () => {
-  const [open, setOpen] useState(false)
+  const [open, setOpen] =useState(false)
   return (
     <nav>
         <div className='left'>
