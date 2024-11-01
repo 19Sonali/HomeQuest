@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ListPage from "./routes/ListPage/ListPage";
 import Layout from "./routes/layout/Layout";
 import SinglePage from "./routes/SinglePage/SinglePage";
+import ProfilePage from "./routes/ProfilePage/ProfilePage";
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
         {
           path: "/list",
           element: <ListPage />,
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage />,
         }
       ],
     },
