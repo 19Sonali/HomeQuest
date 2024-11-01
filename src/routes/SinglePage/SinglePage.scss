@@ -1,9 +1,24 @@
+@import "../../responsive.scss";
+
 .SinglePage {
   display: flex;
   height: 100%;
 
+  @include md {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
   .details {
     flex: 3;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
 
     .wrapper {
       padding-right: 50px;
@@ -76,6 +91,14 @@
   .features {
     flex: 2;
     background-color: #fcf5f3;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
 
     .wrapper {
       padding: 0px 20px;
@@ -94,22 +117,22 @@
         margin-bottom: 10px;
       }
 
-      .feature{
+      .feature {
         display: flex;
         align-items: center;
         gap: 10px;
 
-        img{
+        img {
           background-color: rgba(254, 205, 81, 0.209);
         }
 
-        .featureText{
-          span{
+        .featureText {
+          span {
             font-weight: bold;
           }
-          p{
+          p {
             font-size: 14px;
-            }
+          }
         }
       }
 
@@ -121,6 +144,58 @@
         background-color: white;
 
         border-radius: 10px;
+      }
+      .listHorizontal {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: white;
+
+        border-radius: 10px;
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+
+        @include lg {
+          font-size: 12px;
+        }
+
+        .size {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: white;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      }
+
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: white;
+          border: 1px solid #fece51;
+          border-radius: 5px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
   }
